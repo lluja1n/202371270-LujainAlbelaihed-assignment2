@@ -2,19 +2,21 @@
 
 ## 1. Project Overview
 
-This project is a responsive personal portfolio website developed using HTML, CSS, and JavaScript. The website presents information about me, my programming skills, my projects, and a contact form.
+This project is a responsive and interactive personal portfolio website developed using HTML, CSS, and JavaScript.
+
+Assignment 2 extends the original portfolio by adding project filtering, contact form validation, theme preference persistence, and smooth visual transitions.
 
 ## 2. HTML Structure
 
-The website is organized using semantic HTML elements.
+The website uses semantic HTML elements to organize its content.
 
 ### Header and Navigation
 
-The header contains my name, a short description, navigation links, and a theme toggle button. The navigation links allow users to move directly to different sections of the page.
+The header contains my name, a short description, navigation links, and a theme toggle button.
 
 ### About Me
 
-The About Me section contains a short introduction and a personal tagline.
+The About Me section contains a short introduction and personal tagline.
 
 ### Skills
 
@@ -28,60 +30,126 @@ The Projects section contains three projects:
 2. Digital Traffic Light System
 3. E-Waste Management System
 
-Each project includes a title, image, and short description.
+Each project includes a title, image, and description.
+
+Project cards also contain `data-category` attributes used for filtering.
 
 ### Contact
 
-The Contact section contains a form with fields for:
+The Contact section contains a form with Name, Email, and Message fields.
 
-- Name
-- Email
-- Message
+A feedback element displays validation messages after submission.
 
 ## 3. CSS Styling
 
 CSS is stored in `css/styles.css`.
 
-Flexbox is used to organize elements such as the skills list, project cards, navigation on smaller screens, and the contact form.
+The website uses a pink, dusty mauve, and sage green color palette.
 
-The project cards use flexible sizing so that they can adjust according to the screen width.
+Flexbox is used to organize the skills list, project cards, contact form, and mobile navigation.
+
+Separate CSS rules define the appearance of light and dark modes.
+
+### Smooth Transitions
+
+CSS transitions are applied to the page background, text, header, project cards, buttons, and form elements.
+
+These transitions make switching between themes smoother.
+
+The `scroll-behavior: smooth` property is used for smooth navigation between sections.
 
 ## 4. Responsive Design
 
-A CSS media query is used to modify the layout when the screen width is 768 pixels or smaller.
+A CSS media query adjusts the layout when the screen width is 768 pixels or smaller.
 
 On smaller screens:
 
 - Navigation links are displayed vertically.
 - Project cards use the full available width.
-- Padding is reduced to better fit smaller screens.
-
-The website was tested by resizing the browser and using browser developer tools.
+- Padding is reduced to fit smaller screens.
 
 ## 5. JavaScript Features
 
 JavaScript is stored in `js/script.js`.
 
-### Dark and Light Mode
+### 5.1 Dark and Light Mode
 
-The theme toggle button uses an event listener to detect when it is clicked. JavaScript toggles a `dark-mode` class on the body element.
+An event listener detects clicks on the theme toggle button.
 
-The button text also changes according to the current theme. When Dark Mode is active, the button displays "Light Mode", and when Light Mode is active, it displays "Dark Mode".
+JavaScript adds or removes the `dark-mode` class from the body element.
 
-### Back to Top Button
+The button text changes depending on the active theme.
 
-The Back to Top button is initially hidden. JavaScript monitors the user's scrolling position and displays the button after the user scrolls more than 300 pixels.
+### 5.2 Theme Preference Persistence
 
-When the button is clicked, the page smoothly scrolls back to the top.
+The selected theme is saved in browser localStorage.
 
-## 6. Testing
+When the page loads, JavaScript checks the saved preference and restores dark mode if it was previously selected.
 
-The website was tested to verify:
+### 5.3 Back to Top Button
 
-- Navigation links work correctly.
-- Project images are displayed.
+The Back to Top button appears when the user scrolls more than 300 pixels down the page.
+
+Clicking the button smoothly scrolls to the top.
+
+### 5.4 Project Filtering
+
+The Projects section contains three filter buttons:
+
+- All
+- Hardware
+- Software
+
+JavaScript reads the selected button's `data-filter` value and compares it with each project's `data-category` attribute.
+
+Matching projects remain visible, while nonmatching projects are hidden.
+
+The E-Waste Management System project belongs to both the Software and Hardware categories.
+
+### 5.5 Contact Form Validation
+
+The contact form uses JavaScript to validate user input before accepting a demonstration submission.
+
+Validation includes:
+
+- Checking that all fields are filled.
+- Checking the email input's format.
+- Rejecting email addresses containing spaces.
+
+If validation fails, an error message is displayed.
+
+If validation succeeds, a success message is displayed and the form fields are cleared.
+
+The form uses `novalidate` so that JavaScript controls the feedback messages.
+
+The feedback element uses `role="status"` and `aria-live="polite"` to improve accessibility.
+
+The form does not send data to a backend server.
+
+## 6. Error Handling and User Feedback
+
+The website provides feedback for invalid contact form submissions.
+
+If required fields are empty, the user receives a message requesting that all fields be completed.
+
+If the email format is invalid, the user receives an email validation message.
+
+Successful validation displays a confirmation message.
+
+## 7. Testing
+
+The following checks should be performed before final submission:
+
+- Navigation links move to the correct sections.
+- Project images display correctly.
+- Project filters show the correct projects.
 - Dark and Light Mode work correctly.
-- The theme button text changes correctly.
-- The Back to Top button appears after scrolling.
-- The Back to Top button scrolls smoothly to the top.
+- The selected theme remains after refreshing the page.
+- Empty contact form fields display an error.
+- Invalid email input displays an error.
+- Valid form input displays a success message.
+- The Back to Top button works correctly.
+- Theme transitions and smooth scrolling work correctly.
 - The layout adapts to desktop, tablet, and mobile screen sizes.
+
+Only report these checks as completed after testing them.

@@ -1,65 +1,110 @@
-# AI Usage Report
+# AI Usage Report — Assignment 2
 
-## 1. Tools Used and Use Cases
+## 1. AI Tools Used
 
-ChatGPT was used as an AI-assisted development tool during this assignment.
+**Tool:** ChatGPT (GPT-6)
 
-It was used for:
+ChatGPT was used for explanations, code suggestions, troubleshooting, design recommendations, Git commands, and documentation assistance.
 
-- Suggesting example HTML, CSS, and JavaScript code.
-- Explaining unfamiliar HTML elements such as `<nav>`, `<div>`, `<ul>`, and `<li>`.
-- Explaining CSS concepts such as Flexbox, `flex-wrap`, and media queries.
-- Explaining how `@media (max-width: 768px)` can be used to create a responsive layout for smaller screens.
-- Explaining JavaScript concepts such as `getElementById()`, event listeners, `classList.toggle()`, and scroll events.
-- Suggesting responsive styling for the portfolio.
-- Reviewing parts of the HTML and CSS structure.
-- Troubleshooting Git and GitHub issues during repository setup and synchronization.
+## 2. AI Usage Log
 
-## 2. Benefits and Challenges
+### C01 — Repository Setup and Git Commits
+
+- **Purpose:** Set up the Assignment 2 repository and organize commits.
+- **AI Assistance:** Explained Git repository configuration, commit messages, and how to add AI assistance credits.
+- **My Contribution:** Followed the steps, reviewed the repository setup, and updated the commit history.
+- **Verification:** Checked the repository and commit history on GitHub.
+
+### C02 — Interactive Project Filtering
+
+- **Files:** `index.html`, `css/styles.css`, `js/script.js`
+- **Purpose:** Allow visitors to filter projects by category.
+- **AI Assistance:** Explained `data-filter`, `data-category`, event listeners, and category matching.
+- **My Contribution:** Added the filter buttons, categorized the projects, and implemented the filtering functionality.
+- **Verification:** Tested the All, Hardware, and Software filters.
+
+### C03 — Filter Button Dark Mode Styling
+
+- **File:** `css/styles.css`
+- **Purpose:** Make the project filters match dark mode.
+- **AI Assistance:** Suggested CSS selectors for dark-mode button styling.
+- **My Contribution:** Added the CSS rules to match the existing theme.
+- **Verification:** Checked the filter buttons in dark mode.
+
+### C04 — Theme Preference Persistence
+
+- **File:** `js/script.js`
+- **Purpose:** Save the user's selected theme between page visits.
+- **AI Assistance:** Explained how to use localStorage to save and retrieve the theme.
+- **My Contribution:** Updated the existing theme toggle to save the preference and restore it when the page loads.
+- **Verification:** Tested the theme toggle and refreshed the page to check whether the preference remained.
+
+### C05 — Contact Form Validation
+
+- **Files:** `index.html`, `css/styles.css`, `js/script.js`
+- **Purpose:** Validate contact form input and provide feedback.
+- **AI Assistance:** Explained form submission events, input validation, feedback messages, and email validation.
+- **My Contribution:** Implemented the validation logic, added accessible feedback, and selected feedback colors.
+- **Verification:** Tested empty fields, invalid email input, and valid submissions.
+
+### C06 — Portfolio Theme Redesign
+
+- **File:** `css/styles.css`
+- **Purpose:** Improve the portfolio's visual appearance.
+- **AI Assistance:** Suggested color palettes, created a visual mockup, and provided CSS styling suggestions.
+- **My Contribution:** Selected the pink, dusty mauve, and sage green palette. Rejected an earlier redesign and chose to keep the original layout and Arial font.
+- **Verification:** Review the website in light and dark mode to check the final colors and readability.
+
+### C07 — Smooth Scrolling and Theme Transitions
+
+- **File:** `css/styles.css`
+- **Purpose:** Improve navigation and make theme changes smoother.
+- **AI Assistance:** Explained CSS transitions and suggested applying them consistently across the website.
+- **My Contribution:** Added smooth scrolling and background/text transitions, then incorporated transitions for other interface elements.
+- **Verification:** Test section navigation and switching between light and dark mode.
+
+## 3. Benefits and Challenges
 
 ### Benefits
 
-Using ChatGPT helped me understand unfamiliar concepts while implementing them in the project. It was especially useful when I needed explanations of HTML elements, CSS responsive design, and JavaScript interactions.
+ChatGPT helped me understand JavaScript concepts such as event listeners, dataset attributes, localStorage, and form validation.
 
-It also helped identify possible improvements and provided suggestions for organizing the website and troubleshooting Git/GitHub problems.
+It also helped me improve the website's styling and organize the development process using Git commits.
 
 ### Challenges
 
-AI suggestions still required review and testing. Some suggestions needed to be adjusted based on my project structure and my own design decisions.
+Some AI suggestions were more complicated than necessary for my project.
 
-This showed me that AI-generated suggestions should not automatically be assumed to be correct. I needed to understand the suggested code, test it, and decide whether it was appropriate for my project.
+For example, I decided not to use a complete redesign with additional fonts and animations. Instead, I kept my original layout and made smaller changes.
 
-## 3. Learning Outcomes
+This helped me understand the importance of reviewing AI suggestions rather than accepting every generated solution.
 
-Through the AI-assisted development process, I improved my understanding of:
+## 4. Learning Outcomes
 
-- Semantic HTML and the purpose of navigation elements.
-- The difference between grouping elements such as `<div>` and semantic elements.
-- HTML unordered lists and list items.
-- CSS Flexbox and flexible layouts.
-- Using `flex-wrap` to allow elements to move to another row when space becomes limited.
-- CSS media queries and how they can adapt a website to different screen sizes.
-- Selecting HTML elements from JavaScript using their IDs.
-- Handling button clicks using JavaScript event listeners.
-- Adding and removing CSS classes using JavaScript.
-- Detecting scrolling and creating smooth scrolling interactions.
-- Basic Git and GitHub repository management.
+Through this assignment, I improved my understanding of:
 
-## 4. Responsible Use and Modifications
+- Filtering HTML elements using JavaScript.
+- Using custom data attributes.
+- Saving and retrieving values with localStorage.
+- Validating forms using JavaScript.
+- Displaying error and success feedback.
+- Applying CSS transitions.
+- Creating consistent light and dark themes.
+- Organizing Git commits and documenting AI assistance.
 
-AI-generated suggestions were reviewed before being incorporated into the project. I also made several modifications instead of using every suggestion exactly as provided.
+## 5. Responsible AI Use
 
-Some of my modifications and decisions included:
+AI-generated suggestions were reviewed and modified before being incorporated into the project.
 
-- Rewriting the About Me description to better represent me.
-- Changing the portfolio tagline
-- Choosing to add a Skills section to the portfolio.
-- Organizing the programming languages within the Skills section.
-- Adding an E-Waste Management System as a third project.
-- Selecting and adding the images used to represent my projects.
-- Choosing to include a Dark and Light Mode feature.
-- Modifying the theme feature so that the button text changes to "Light Mode" when Dark Mode is active and changes back to "Dark Mode" when Light Mode is active.
-- Choosing to add a Back to Top button as an additional JavaScript feature.
-- Testing and reviewing AI-assisted code before keeping it in the final project.
+I made my own decisions about the website's layout, color palette, project categories, and which suggestions to implement.
 
-AI was used as a learning and development tool rather than a replacement for understanding the implementation. The final project was reviewed and adjusted based on my own decisions.
+AI assistance was used to support learning and development, while the final implementation remained subject to my review and testing.
+
+## 6. AI Declaration
+
+- **Student Name:** Lujain Albelaihed
+- **Student ID:** 202371270
+- **AI Tool:** ChatGPT (GPT-6)
+- **Date:** October 19, 2026
+
+I declare that AI assistance was used during the development of this assignment. The assistance included explanations, code suggestions, troubleshooting, styling recommendations, and documentation support. The AI-assisted work is described in this report, and the required conversation evidence will be submitted separately.
