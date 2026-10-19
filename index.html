@@ -100,7 +100,7 @@
         <section id="contact">
             <h2>Contact Me</h2>
 
-            <form>
+            <form id="contact-form" novalidate>
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name">
 
@@ -111,6 +111,8 @@
                 <textarea id="message" name="message"></textarea>
 
                 <button type="submit">Send Message</button>
+
+                <p id="form-feedback" role="status" aria-live="polite"></p>
             </form>
         </section>
 

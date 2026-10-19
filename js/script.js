@@ -52,3 +52,29 @@ filterButtons.forEach(function (button) {
         });
     });
 });
+
+const contactForm = document.getElementById("contact-form");
+const formFeedback = document.getElementById("form-feedback");
+
+contactForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const emailInput = document.getElementById("email");
+    const email = emailInput.value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    formFeedback.className = "";
+
+    if (name === "" || email === "" || message === "") {
+        formFeedback.textContent = "Please fill in all fields.";
+        formFeedback.classList.add("error");
+    } else if (!emailInput.validity.valid || email.includes(" ")) {
+        formFeedback.textContent = "Please enter a valid email address.";
+        formFeedback.classList.add("error");
+    } else {
+        formFeedback.textContent = "Thank you! Your message is ready.";
+        formFeedback.classList.add("success");
+        contactForm.reset();
+    }
+});

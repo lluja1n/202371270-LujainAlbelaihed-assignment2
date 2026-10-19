@@ -134,6 +134,19 @@ form button {
     width: fit-content;
 }
 
+#form-feedback {
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+#form-feedback.error {
+    color: #c62828;
+}
+
+#form-feedback.success {
+    color: #237a3b;
+}
+
 body.dark-mode {
     background-color: #1e1e1e;
     color: #f4f4f4;
@@ -163,6 +176,14 @@ body.dark-mode .project-filters button {
 
 body.dark-mode .project-filters button:hover {
     background-color: #444;
+}
+
+body.dark-mode #form-feedback.error {
+    color: #ff9999;
+}
+
+body.dark-mode #form-feedback.success {
+    color: #8fe0a1;
 }
 
 #back-to-top {
