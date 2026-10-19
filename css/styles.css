@@ -6,11 +6,13 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     line-height: 1.6;
+    background-color: #f8f3f4;
+    color: #49303b;
 }
 
 header {
     text-align: center;
-    background-color: #f4f4f4;
+    background-color: #ebd9df;
     padding: 50px 20px;
 }
 
@@ -39,7 +41,7 @@ nav {
 nav a {
     text-decoration: none;
     margin: 0 15px;
-    color: #333;
+    color: #49303b;
     font-weight: bold;
 }
 
@@ -56,7 +58,8 @@ nav a:hover {
 }
 
 #skills li {
-    background-color: #f4f4f4;
+    background-color: #ebd9df;
+    color: #49303b;
     padding: 8px 15px;
     border-radius: 8px;
 }
@@ -80,23 +83,24 @@ nav a:hover {
 
 .project-filters button {
     padding: 10px 20px;
-    border: 1px solid #ccc;
+    border: 1px solid #c6a0b4;
     border-radius: 5px;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #ebd9df;
+    color: #49303b;
     cursor: pointer;
 }
 
 .project-filters button:hover {
-    background-color: #ddd;
+    background-color: #c6a0b4;
 }
 
 .project {
     flex: 1;
     min-width: 250px;
-    border: 1px solid #ddd;
+    border: 1px solid #dfcbd5;
     border-radius: 10px;
     padding: 20px;
+    background-color: #fffafb;
 }
 
 .project img {
@@ -116,9 +120,11 @@ form input,
 form textarea {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #dfcbd5;
     border-radius: 5px;
     font-family: inherit;
+    background-color: #fffafb;
+    color: #49303b;
 }
 
 form textarea {
@@ -132,50 +138,83 @@ form button {
     border-radius: 5px;
     cursor: pointer;
     width: fit-content;
+    background-color: #a5b49a;
+    color: #293529;
 }
 
+#theme-toggle {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #c6a0b4;
+    color: #49303b;
+    cursor: pointer;
+}
+
+/* Form feedback */
 #form-feedback {
     margin: 5px 0;
     font-weight: bold;
 }
 
 #form-feedback.error {
-    color: #c62828;
+    color: #b32645;
 }
 
 #form-feedback.success {
-    color: #237a3b;
+    color: #326b48;
 }
 
+/* Dark mode */
 body.dark-mode {
-    background-color: #1e1e1e;
-    color: #f4f4f4;
+    background-color: #241c28;
+    color: #f4e9f0;
 }
 
 body.dark-mode header {
-    background-color: #2b2b2b;
+    background-color: #382b3d;
 }
 
 body.dark-mode nav a {
-    color: #f4f4f4;
+    color: #f4e9f0;
 }
 
 body.dark-mode #skills li {
-    background-color: #333;
+    background-color: #49364c;
+    color: #f4e9f0;
 }
 
 body.dark-mode .project {
-    border-color: #555;
+    background-color: #382b3d;
+    border-color: #59455d;
 }
 
 body.dark-mode .project-filters button {
-    background-color: #333;
-    color: #f4f4f4;
-    border-color: #555;
+    background-color: #49364c;
+    color: #f4e9f0;
+    border-color: #59455d;
 }
 
 body.dark-mode .project-filters button:hover {
-    background-color: #444;
+    background-color: #a5b49a;
+    color: #293529;
+}
+
+body.dark-mode #theme-toggle {
+    background-color: #cda3bd;
+    color: #241c28;
+}
+
+body.dark-mode form input,
+body.dark-mode form textarea {
+    background-color: #382b3d;
+    color: #f4e9f0;
+    border-color: #59455d;
+}
+
+body.dark-mode form button {
+    background-color: #a5b49a;
+    color: #293529;
 }
 
 body.dark-mode #form-feedback.error {
@@ -183,9 +222,10 @@ body.dark-mode #form-feedback.error {
 }
 
 body.dark-mode #form-feedback.success {
-    color: #8fe0a1;
+    color: #a9e3b7;
 }
 
+/* Back to top */
 #back-to-top {
     display: none;
     position: fixed;
@@ -195,8 +235,11 @@ body.dark-mode #form-feedback.success {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    background-color: #a5b49a;
+    color: #293529;
 }
 
+/* Responsive design */
 @media (max-width: 768px) {
     header {
         padding: 30px 15px;
