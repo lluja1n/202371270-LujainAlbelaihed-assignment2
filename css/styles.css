@@ -2,12 +2,17 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     line-height: 1.6;
     background-color: #f8f3f4;
     color: #49303b;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 header {
@@ -101,6 +106,16 @@ nav a:hover {
     border-radius: 10px;
     padding: 20px;
     background-color: #fffafb;
+    transition: background-color 0.3s ease,
+                color 0.3s ease,
+                border-color 0.3s ease,
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(73, 48, 59, 0.15);
 }
 
 .project img {
@@ -237,6 +252,22 @@ body.dark-mode #form-feedback.success {
     cursor: pointer;
     background-color: #a5b49a;
     color: #293529;
+}
+
+/* Smooth theme transitions */
+header,
+nav a,
+.project,
+#skills li,
+.project-filters button,
+#theme-toggle,
+form input,
+form textarea,
+form button,
+#back-to-top {
+    transition: background-color 0.3s ease,
+                color 0.3s ease,
+                border-color 0.3s ease;
 }
 
 /* Responsive design */
