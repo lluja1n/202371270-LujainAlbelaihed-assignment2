@@ -23,6 +23,7 @@ main {
 section {
     padding: 40px 0;
 }
+
 header h1 {
     margin-bottom: 5px;
 }
@@ -70,6 +71,26 @@ nav a:hover {
     width: 100%;
 }
 
+.project-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+}
+
+.project-filters button {
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f4f4f4;
+    color: #333;
+    cursor: pointer;
+}
+
+.project-filters button:hover {
+    background-color: #ddd;
+}
+
 .project {
     flex: 1;
     min-width: 250px;
@@ -84,7 +105,6 @@ nav a:hover {
     object-fit: cover;
     border-radius: 8px;
 }
-
 
 form {
     display: flex;
@@ -133,6 +153,16 @@ body.dark-mode #skills li {
 
 body.dark-mode .project {
     border-color: #555;
+}
+
+body.dark-mode .project-filters button {
+    background-color: #333;
+    color: #f4f4f4;
+    border-color: #555;
+}
+
+body.dark-mode .project-filters button:hover {
+    background-color: #444;
 }
 
 #back-to-top {

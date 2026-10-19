@@ -26,3 +26,22 @@ backToTopButton.addEventListener("click", function () {
         behavior: "smooth"
     });
 });
+
+const filterButtons = document.querySelectorAll(".project-filters button");
+const projects = document.querySelectorAll(".project");
+
+filterButtons.forEach(function (button) {
+    button.addEventListener("click", function () {
+        const selectedFilter = button.dataset.filter;
+
+        projects.forEach(function (project) {
+            const categories = project.dataset.category.split(" ");
+
+            if (selectedFilter === "all" || categories.includes(selectedFilter)) {
+                project.style.display = "";
+            } else {
+                project.style.display = "none";
+            }
+        });
+    });
+});
